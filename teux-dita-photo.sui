@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE StructDocument [
+<!ENTITY interface SYSTEM "ent/interface.ent">
+<!ENTITY ref-toolbar SYSTEM "ent/ref-toolbar.ent">
+]>
+<StructDocument>
+	&interface;
+	&ref-toolbar;
+</StructDocument>

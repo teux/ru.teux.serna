@@ -1,0 +1,33 @@
+<!--inside section-->
+<content>
+	<pattern>node()[ancestor-or-self::*[contains(@class," topic/section ")]]</pattern>
+	<xpath-location>ancestor-or-self::*[contains(@class," topic/section ")][1]</xpath-location>
+	<relative-location>after</relative-location>
+	<text>&lt;section&gt;&lt;title/&gt;&lt;p/&gt;&lt;/section&gt;</text>
+</content>
+<!--just before (first) section-->
+<content>
+	<pattern>node()[cc:nodes-after()[1][self::*[contains(@class," topic/section ")]]]</pattern>
+	<xpath-location/>
+	<text>&lt;section&gt;&lt;title/&gt;&lt;p/&gt;&lt;/section&gt;</text>
+</content>
+<!--just after (last) section-->
+<content>
+	<pattern>node()[cc:nodes-before()[1][self::*[contains(@class," topic/section ")]]]</pattern>
+	<xpath-location/>
+	<text>&lt;section&gt;&lt;title/&gt;&lt;p/&gt;&lt;/section&gt;</text>
+</content>
+<!--in body with section-->
+<content>
+	<pattern>node()[ancestor-or-self::*[contains(@class," topic/body ")]/*[contains(@class," topic/section ")]]</pattern>
+	<xpath-location>ancestor-or-self::*[contains(@class," topic/body ")]/*[contains(@class," topic/section ")][1]</xpath-location>
+	<relative-location>before</relative-location>
+	<text>&lt;section&gt;&lt;title/&gt;&lt;p/&gt;&lt;/section&gt;</text>
+</content>
+<!--in body without section-->
+<content>
+	<pattern>node()[ancestor-or-self::*[contains(@class," topic/body ")]]</pattern>
+	<xpath-location>ancestor-or-self::*[contains(@class," topic/body ")]</xpath-location>
+	<relative-location>append</relative-location>
+	<text>&lt;section&gt;&lt;title/&gt;&lt;p/&gt;&lt;/section&gt;</text>
+</content>

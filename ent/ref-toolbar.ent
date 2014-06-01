@@ -1,0 +1,38 @@
+<ToolBar>
+	<properties>
+		<name>RefsToolbar</name>
+		<inscription>Ссылки DITA</inscription>
+		<is-visible>true</is-visible>
+		<resize-enabled>false</resize-enabled>
+		<vertically-stretchable>false</vertically-stretchable>
+		<horizontally-stretchable>false</horizontally-stretchable>
+		<plugin-origin>DITA_Refs</plugin-origin>
+	</properties>
+	<ToolButton>
+		<properties>
+			<name>keyref</name>
+			<action>DITA_Refs:keyrefAction</action>
+			<plugin-origin>DITA_Refs</plugin-origin>
+			<is-visible>true</is-visible>
+			<accel>Ctrl+1</accel>
+		</properties>
+	</ToolButton>
+	<ToolButton>
+		<properties>
+			<name>xrefButton</name>
+			<action>DITA_Refs:xrefAction</action>
+			<plugin-origin>DITA_Refs</plugin-origin>
+			<is-visible>true</is-visible>
+			<accel>Ctrl+2</accel>
+		</properties>
+	</ToolButton>
+	<ToolButton>
+		<properties>
+			<name>idButton</name>
+			<action>DITA_Refs:idAction</action>
+			<plugin-origin>DITA_Refs</plugin-origin>
+			<is-visible>true</is-visible>
+			<accel>Ctrl+3</accel>
+		</properties>
+	</ToolButton>
+</ToolBar>

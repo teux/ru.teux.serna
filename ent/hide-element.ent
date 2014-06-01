@@ -1,0 +1,5 @@
+<t:hide-elements>fig/* !fig/image !fig/title
+p/codeblock p/defblock p/deftable p/dl p/fig p/note p/ol p/simpletable p/sl p/table p/ul
+note/defblock note/deftable note/dl note/fig note/simpletable note/sl note/table note/minitoc
+li/minitoc
+</t:hide-elements>

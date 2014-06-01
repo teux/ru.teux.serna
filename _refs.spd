@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<serna-plugin>
+  <name>DITA_Refs</name>
+	<shortdesc>Teux Refs</shortdesc>
+  <dll>$SERNA_PLUGINS_BIN/pyplugin/pyplugin21</dll>
+  <data>
+    <python-dll>$SERNA_PYTHON_DLL</python-dll>
+    <instance-module>py.refs.Refs</instance-module>
+    <instance-class>Refs</instance-class>
+  </data>
+  <ui>
+    <uiActions>
+      <uiAction>
+      	<name>keyrefAction</name>
+        <commandEvent>keyrefMsgEvent</commandEvent>
+      	<inscription>Вставить keyref (Ctrl+1)</inscription>
+      	<icon>%:keyref</icon>
+      </uiAction>
+    	<uiAction>
+    		<name>xrefAction</name>
+    		<commandEvent>xrefMsgEvent</commandEvent>
+    		<inscription>Вставить xref, conref, link (Ctrl+2)</inscription>
+    		<icon>%:xref</icon>
+    	</uiAction>
+    	<uiAction>
+    		<name>idAction</name>
+    		<commandEvent>idMsgEvent</commandEvent>
+    		<inscription>Присвоить id (Ctrl+3)</inscription>
+    		<icon>%:anchor</icon>
+    	</uiAction>
+    </uiActions>
+  </ui>
+</serna-plugin> 

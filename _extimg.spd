@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<serna-plugin>
+	<name>ExternalImages</name>
+  <shortdesc>Teux External images</shortdesc>
+  <dll>$SERNA_PLUGINS_BIN/pyplugin/pyplugin21</dll>
+	<load-for>wysiwyg-mode</load-for>
+  <data>
+    <python-dll>$SERNA_PYTHON_DLL</python-dll>
+  	<instance-module>py.Extimg</instance-module>
+  	<instance-class>ExternalImages</instance-class>
+  </data>
+</serna-plugin> 

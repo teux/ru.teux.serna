@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<serna-plugin>
+  <name>Strict_DITA</name>
+	<shortdesc>Teux DITA</shortdesc>
+  <dll>$SERNA_PLUGINS_BIN/pyplugin/pyplugin21</dll>
+  <data>
+    <python-dll>$SERNA_PYTHON_DLL</python-dll>
+    <instance-module>py.Strictdita</instance-module>
+    <instance-class>StrictDITA</instance-class>
+  </data>
+  <ui>
+    <uiActions>
+      <uiAction>
+        <name>insertTableGroupHeader</name>
+        <commandEvent>insertTableGroupHeaderMsgEvent</commandEvent>
+        <inscription>Вставить группу с заголовком</inscription>
+      </uiAction>
+    </uiActions>
+    <uiItems>
+      <MainWindow>
+        <MainMenu>
+          <PopupMenu>
+            <properties>
+              <name>teux</name>
+              <inscription>Teux</inscription>
+              <before>helpSubmenu</before>
+            </properties>
+            <PopupMenu>
+							<properties>
+								<name>tableCommands</name>
+								<inscription>Таблицы</inscription>
+							</properties>
+							<MenuItem>
+								<properties>
+									<name>insertTableGroupHeaderMenuItem</name>
+									<action>insertTableGroupHeader</action>
+									<accel>Ctrl+G</accel>
+								</properties>
+							</MenuItem>
+						</PopupMenu>
+          </PopupMenu>
+        </MainMenu>
+      </MainWindow>
+    </uiItems>
+  </ui>
+</serna-plugin> 

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE t:document-template PUBLIC "-//Syntext//DTD Syntext Document Template V2.0//EN" "doctemplate.dtd" [
+<!ENTITY params  SYSTEM "ent/sdt-params.ent">
+<!ENTITY scope   SYSTEM "ent/scope-def.ent">
+<!ENTITY speller SYSTEM "ent/speller.ent">
+<!ENTITY hide    SYSTEM "ent/hide-element.ent">
+]>
+<t:document-template xmlns:t="http://www.syntext.com/Extensions/DocTemplate-2.0">
+  <t:category>Teux</t:category>
+  <t:name>photoFile</t:name>
+  <t:xml-schema>urn:teux:names:specialization:dita:xsd:photo.xsd</t:xml-schema>
+  <t:nons-schema-guess-string>photoFile</t:nons-schema-guess-string>
+  <t:rootelem-guess-string>photoFile</t:rootelem-guess-string>
+  <t:root-elements>photoFile</t:root-elements>
+  <t:document-skeleton>
+    <t:name>PhotoFile</t:name>
+    <t:content>
+      <photoFile id="Noname1" xml:lang="ru" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:teux:names:specialization:dita:xsd:photo.xsd">
+        <title>photoFile</title>
+		<shortdesc/>
+        <photoBody><p/></photoBody>
+      </photoFile>
+    </t:content>
+  </t:document-skeleton>
+  <t:template-showup-priority>100</t:template-showup-priority>
+  &params;
+  <!--&scope;
+  &speller;
+  &hide;-->
+</t:document-template>

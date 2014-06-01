@@ -1,0 +1,4 @@
+	<t:spellcheck>
+		<t:skip-elements>topicref codexample codeph parmname parmdef attrdef elemdef argument value argname method codeblock defblock element attribute name keyword
+		domain protocol</t:skip-elements>
+  </t:spellcheck>

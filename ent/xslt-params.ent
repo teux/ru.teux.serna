@@ -1,0 +1,19 @@
+  <paramSet>
+    <name>Draft Print</name>
+    <description>Hide Prolog</description>
+    <params>
+      <DRAFT-PRINT>
+      	<type>string</type>
+      	<value>yes</value>
+      </DRAFT-PRINT>
+    </params>
+  </paramSet>
+  <paramSet>
+    <name>Edit Conrefs</name>
+    <description>Edit Conrefs</description>
+    <params>
+      <SHOW-CONREF-RESOLVED>
+        <value>no</value>
+      </SHOW-CONREF-RESOLVED>
+    </params>
+  </paramSet>

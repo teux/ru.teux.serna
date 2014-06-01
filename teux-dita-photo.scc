@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf8"?>
+<!DOCTYPE serna-custom-content [
+<!ENTITY custom-content SYSTEM "ent/scc.ent">
+<!ENTITY custom-content-section SYSTEM "ent/scc-section.ent">
+]>
+<serna-custom-content>
+	&custom-content;
+	<!--section or concept-->
+	<custom-content>
+		<name>section </name>
+		<inscription>Insert Section</inscription>
+		<icon>section</icon>
+		<accel>Ctrl+Alt+S</accel>
+		<context-specs>
+			&custom-content-section;
+			<content>
+				<pattern>node()[self::*[contains(@class," topic/topic ")]]</pattern>
+				<xpath-location/>
+				<text>&lt;concept id="$(generate-id)"&gt;&lt;title/&gt;&lt;conbody&gt;&lt;p/&gt;&lt;/conbody&gt;&lt;/concept&gt;</text>
+			</content>
+		</context-specs>
+		<make-tool-button>true</make-tool-button>
+	</custom-content>
+</serna-custom-content>
