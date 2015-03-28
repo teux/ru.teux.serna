@@ -28,11 +28,11 @@ class ExternalImages(DocumentPlugin):
 			urlparts = urlparse.urlsplit(href)
 			h = httplib.HTTPConnection(urlparts[1])
 			h.request('GET', href)
-			
+
 			tf = NamedTemporaryFile(suffix='.jpg', delete=False)
 			tf.write(h.getresponse().read())
 			tf.file.close()
-			
+
 			self.tmpImgs.append(tf)
 			return XpathValue(tf.name)
 		else:

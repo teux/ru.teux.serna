@@ -91,7 +91,40 @@
 			<xsl:apply-templates select="@tripId" mode="att-inline"/>
 		</fo:block>
 	</xsl:template>
-	
+
+    <!--parallax-->
+    <xsl:template match="*[contains(@class, ' photoFile/parallax ')]">
+        <fo:block padding-top="8pt" padding-bottom="8pt">
+            <xsl:apply-templates select="*[name()!='image']" mode="parallax"/>
+            <fo:block>
+                Link:
+                <se:line-edit value="{string(@href)}" is-enabled="true" width="400px"/>
+                , slowdown:
+                <se:combo-box value="{string(@slowdown)}" is-enabled="true" width="150px">
+                    <se:value>true</se:value>
+                    <se:value>false</se:value>
+                </se:combo-box>
+            </fo:block>
+            <xsl:apply-templates select="*[name()='image']"/>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template match="*[contains(@class, ' topic/shortdesc ') or contains(@class, ' topic/note ')]" mode="parallax">
+        <fo:block padding-top="1pt" font-weight="bold">
+            <xsl:apply-templates select="node()"/>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template match="*[contains(@class, ' topic/title ')]" mode="parallax">
+        <fo:block padding-top="1pt" font-weight="bold" font-size="14pt">
+            <xsl:apply-templates select="node()"/>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template match="*" mode="parallax">
+        <xsl:apply-templates select="."/>
+    </xsl:template>
+
 	<!--umap-->
 	<xsl:template match="*[contains(@class, ' photoFile/umap ')]">
 		<fo:block padding-bottom="8pt">
