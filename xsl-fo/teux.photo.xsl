@@ -70,9 +70,9 @@
 			</fo:table-body>
 		</fo:table>
 	</xsl:template>
-	
-			
-	
+
+
+
 	<xsl:template match="*" mode="fig">
 		<xsl:apply-templates select="*[name()!='title']"/>
 		<xsl:for-each select="*[contains(@class, ' topic/title ')]">
@@ -81,8 +81,8 @@
 			</fo:block>
 		</xsl:for-each>
 	</xsl:template>
-	
-	
+
+
 	<!--everyTrail-->
 	<xsl:template match="*[contains(@class, ' photoFile/everyTrail ')]">
 		<fo:block padding-bottom="8pt">
@@ -133,7 +133,7 @@
 			<xsl:apply-templates select="@mapId" mode="att-inline"/>
 		</fo:block>
 	</xsl:template>
-	
+
 	<!--youTube-->
 	<xsl:template match="*[contains(@class, ' photoFile/youTube ')]">
 		<fo:block padding-bottom="8pt">
@@ -142,19 +142,28 @@
 			<xsl:apply-templates select="@href" mode="att-inline"/>
 		</fo:block>
 	</xsl:template>
-	
-	
+
+	<!--vimeo-->
+	<xsl:template match="*[contains(@class, ' photoFile/vimeo ')]">
+		<fo:block padding-bottom="8pt">
+			<fo:external-graphic src="{concat('url(',$iconDir,'vimeo.png)')}"/>
+			<fo:inline xsl:use-attribute-sets="interim__title">Movie Link: </fo:inline>
+			<xsl:apply-templates select="@href" mode="att-inline"/>
+		</fo:block>
+	</xsl:template>
+
+
 	<xsl:template match="@*" mode="att-inline">
 		<se:line-edit value="{string(.)}" is-enabled="true" width="200px"/>
 	</xsl:template>
-	
-	
+
+
 	<xsl:template match="*[contains(@class, ' topic/keywords ')]">
 		<xsl:if test="*[contains(@class, ' topic/keyword ')]">
 			<xsl:for-each select="*[contains(@class, ' topic/keyword ')]">
 				<xsl:apply-templates select="."/>
 				<xsl:if test="position() &lt; last()">
-					<xsl:value-of select="', '"/>	
+					<xsl:value-of select="', '"/>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:if>
